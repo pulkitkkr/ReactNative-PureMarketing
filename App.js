@@ -11,15 +11,22 @@ import {
   Text,
   View
 } from 'react-native';
+import AndroidApp from './src-android/app/'
 
-export default class App extends Component<{}> {
+export default class App extends Component {
   render() {
+    var componentToRender = '';
+    if(Platform.OS === 'ios'){
+      componentToRender = <Text>Hello</Text>;
+    }else{
+
+      componentToRender = <AndroidApp/>;
+    }
     return (
       <View >
-        <Text>
-          Welcome to Pure Market Billing Solution!!
-        </Text>
-        
+      {
+        componentToRender
+      }        
       </View>
     );
   }
