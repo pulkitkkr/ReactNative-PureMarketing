@@ -11,7 +11,7 @@ import {
   Text,
   View
 } from 'react-native';
-import AndroidApp from './src-android/app/'
+import AndroidApp from './src-android/modules/app/';
 
 export default class App extends Component {
   render() {
